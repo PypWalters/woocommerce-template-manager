@@ -1,0 +1,62 @@
+{
+	"name": "woocommerce-template-manager",
+	"displayName": "WooCommerce Template Manager",
+	"description": "Adds the ability to compare WooCommerce theme template files in a theme to template files in the plugin.",
+	"publisher": "StephanieWalters",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "wooTemplates.getWooTemplate",
+				"title": "Get WooCommerce Template"
+			}
+		],
+		"colors": [
+			{
+				"id": "wooTemplates.alert",
+				"description": "Color of the alert when a template version is out of date",
+				"defaults": {
+					"dark": "#e48080",
+					"light": "#810000",
+					"highContrast": "#FF000055"
+				}
+			},
+			{
+				"id": "wooTemplates.info",
+				"description": "Color of the information next to a version number when a template version is out of date",
+				"defaults": {
+					"dark": "#91c48c",
+					"light": "#479440",
+					"highContrast": "#255f20"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28",
+		"tslint": "^5.12.1",
+		"@types/node": "^10.12.21",
+		"@types/mocha": "^2.2.42"
+	},
+	"dependencies": {
+		"xmlhttprequest": "^1.8.0"
+	}
+}
