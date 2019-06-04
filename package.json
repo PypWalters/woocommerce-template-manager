@@ -3,6 +3,7 @@
 	"displayName": "WooCommerce Template Manager",
 	"description": "Adds the ability to compare WooCommerce theme template files in a theme to template files in the plugin.",
 	"publisher": "StephanieWalters",
+	"repository": "https://github.com/PypWalters/woocommerce-template-manager",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.33.0"
